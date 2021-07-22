@@ -45,7 +45,7 @@ public class SeleniumBasics
 
 
         // .click() click an element
-        // .clear() textfield or etc, can clear before typing in text
+        // .clear() text field or etc, can clear before typing in text
         // .sendKeys() send specific element as input ex) entering id or password
         // .submit() finds button element and clicks ex) google search, log in button etc
         // .getText() shows text of the element
@@ -82,6 +82,30 @@ public class SeleniumBasics
         moveToElement(WebElement target, int xOffset, int yOffset): Moves mouse to an offset from top left corner of element
 
         release(): releases the depressed left mouse button at current mouse location
+         */
+
+        /* Keyboard Interactions extremely flaky so use it as last resort
+
+           keyDown(java.lang.CharSequence key) :  performs a modifier key press
+           keyUp(java.lang.CharSequence key) : performs a modifier key release
+           sendKeys(java.lang.CharSequence... keys) : Sends keys to the active element
+
+         */
+
+        /* EXAMPLE OF ACTION
+        Actions actions = new Actions(driver);
+        actions. and follow below.
+
+        Hover
+        action.moveToElement(element).build().perform();
+
+         Drag and Drop
+         action.dragAndDrop(element, element2).build().perform();
+
+         click pause release
+
+        action.clickAndHold(element).pause(100).release().build().perform();
+
          */
     }
 }
